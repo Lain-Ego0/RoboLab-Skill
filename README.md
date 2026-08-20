@@ -65,4 +65,8 @@ RoboLab/skills/installed/<skill-id>/<version>/<content-hash>/
 
 Skill 不复制 RoboLab/MJLab、Conda 环境、机器人公共模型或第三方 runtime，只声明依赖并携带自身独有的策略、动作、参数、源码和文档。当前样例产物体积不大，MVP 直接使用普通 Git，不预先引入 LFS/Release。以后确有大型或频繁更新的 Skill artifact 时再单独外置并固定哈希。
 
-完整设计规范目前维护在 RoboLab 主仓库的 `docs/SKILL_SPEC.md`。在 schema 工具落地前，本 README 描述的是目标结构，不代表 catalog 已有可安装 Skill。
+完整设计规范目前维护在 RoboLab 主仓库的 `docs/SKILL_SPEC.md`。
+
+## 当前 Catalog
+
+首个可解析样例是 `motion.unitree-g1-velocity@0.1.0`。它默认面向仿真验证，实机调用仍必须经过 Robot Profile、驱动、安全门和人工确认。Catalog 中的 release tag 在安装时应解析为 Git commit，并将解析后的 commit 和包内容哈希一同写入安装记录。

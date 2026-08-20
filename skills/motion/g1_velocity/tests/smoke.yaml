@@ -1,0 +1,23 @@
+apiVersion: robolab.dev/v1alpha1
+kind: MotionSkillSmokeTest
+
+checks:
+  - type: file_sha256
+    path: artifacts/policy.onnx
+    expected: 2a66ca6336eadb3c0b34b557763f3e06d01ff8fcf6260dd4cedbd69d6093fc28
+  - type: file_sha256
+    path: params/deploy.yaml
+    expected: 01e1cf3f6ec44e9942494fbb4a9904df07201e14e5551a277f38d7c7d1bda28d
+  - type: onnx_load
+    path: artifacts/policy.onnx
+  - type: contract
+    robotProfile: unitree.g1.29dof
+    jointSet: g1.29dof.canonical.v1
+    controlHz: 50
+  - type: command_schema
+    schema: schemas/command.json
+    example:
+      linear_x: 0.0
+      linear_y: 0.0
+      angular_z: 0.0
+      duration_seconds: 1.0

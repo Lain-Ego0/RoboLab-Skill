@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://robolab.dev/schemas/skills/motion.unitree-g1-velocity/command.v1.json",
+  "title": "G1 velocity command",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "linear_x": {
+      "type": "number",
+      "minimum": -0.5,
+      "maximum": 1.0,
+      "default": 0.0,
+      "description": "Forward velocity in metres per second."
+    },
+    "linear_y": {
+      "type": "number",
+      "minimum": -0.5,
+      "maximum": 0.5,
+      "default": 0.0,
+      "description": "Lateral velocity in metres per second."
+    },
+    "angular_z": {
+      "type": "number",
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "default": 0.0,
+      "description": "Yaw velocity in radians per second."
+    },
+    "duration_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 300.0,
+      "default": 10.0,
+      "description": "Maximum command duration; runtime cancellation may stop it earlier."
+    }
+  },
+  "required": ["linear_x", "linear_y", "angular_z"]
+}

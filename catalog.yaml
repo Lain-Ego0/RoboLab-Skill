@@ -1,0 +1,17 @@
+apiVersion: robolab.dev/v1alpha1
+kind: SkillCatalog
+
+metadata:
+  name: robolab-official
+  description: Official open-source Skill catalog for RoboLab.
+
+skills:
+  - id: motion.unitree-g1-velocity
+    name: Unitree G1 Velocity
+    version: 0.1.0
+    kind: MotionSkill
+    path: skills/motion/g1_velocity
+    source:
+      repository: https://github.com/Lain-Ego0/RoboLab-Skill
+      revision: refs/tags/g1-velocity-v0.1.0
+    manifest: skill.yaml
