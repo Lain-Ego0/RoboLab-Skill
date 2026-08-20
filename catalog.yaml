@@ -15,3 +15,21 @@ skills:
       repository: https://github.com/Lain-Ego0/RoboLab-Skill
       revision: bc748fd1186d1103a86747a19cdda64dfd2b65a8
     manifest: skill.yaml
+  - id: tools.mjcf-inspector
+    name: MJCF Inspector
+    version: 0.1.0
+    kind: PlatformSkill
+    path: skills/platform/mjcf_inspector
+    source:
+      repository: https://github.com/Lain-Ego0/RoboLab-Skill
+      revision: 7da66e0c623538a9b418b9211bb220ea909a9633
+    manifest: skill.yaml
+  - id: agent.robot-onboarding
+    name: Robot Onboarding Assistant
+    version: 0.1.0
+    kind: AgentSkill
+    path: skills/agent/robot_onboarding
+    source:
+      repository: https://github.com/Lain-Ego0/RoboLab-Skill
+      revision: 7da66e0c623538a9b418b9211bb220ea909a9633
+    manifest: skill.yaml

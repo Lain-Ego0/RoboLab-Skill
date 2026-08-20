@@ -1,0 +1,38 @@
+apiVersion: robolab.dev/v1alpha1
+kind: PlatformSkill
+metadata:
+  id: tools.mjcf-inspector
+  name: MJCF Inspector
+  version: 0.1.0
+  description: Read-only inspection of a workspace MJCF/XML model with structured reports.
+  license: MIT
+  source:
+    repository: https://github.com/Lain-Ego0/RoboLab-Skill
+    revision: 7da66e0c623538a9b418b9211bb220ea909a9633
+spec:
+  compatibility:
+    platform: ">=0.1.0 <0.2.0"
+    skillApi: v1alpha1
+  runtime:
+    type: python
+    protocol: robolab-job-v1
+    environment:
+      mode: inherit
+    entrypoint:
+      module: robolab_mjcf_inspector.main
+  actions:
+    inspect:
+      title: Inspect MJCF
+      inputSchema: schemas/inspect.input.json
+      outputSchema: schemas/inspect.output.json
+      ui: form
+  permissions:
+    filesystem:
+      read: [workspace, skill]
+      write: [run]
+    network: false
+    subprocess: false
+    robotState: false
+    robotCommand: false
+  validation:
+    smoke: tests/smoke.yaml

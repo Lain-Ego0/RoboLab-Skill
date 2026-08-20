@@ -1,0 +1,7 @@
+apiVersion: robolab.dev/v1alpha1
+kind: AgentSkillSmokeTest
+checks:
+  - type: file_exists
+    path: SKILL.md
+  - type: deny_tool
+    action: robolab.deployments.activate_real

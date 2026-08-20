@@ -1,0 +1,5 @@
+apiVersion: robolab.dev/v1alpha1
+kind: PlatformSkillSmokeTest
+checks:
+  - type: contract
+    outputs: [report.json, report.md, robot_profile.draft.yaml]
