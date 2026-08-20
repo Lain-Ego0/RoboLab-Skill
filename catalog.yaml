@@ -13,5 +13,5 @@ skills:
     path: skills/motion/g1_velocity
     source:
       repository: https://github.com/Lain-Ego0/RoboLab-Skill
-      revision: refs/tags/g1-velocity-v0.1.0
+      revision: bc748fd1186d1103a86747a19cdda64dfd2b65a8
     manifest: skill.yaml
