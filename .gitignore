@@ -1,0 +1,34 @@
+# Python bytecode and tooling caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local environments and build metadata
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Local runtime output. Do not ignore declared Skill artifacts under artifacts/.
+run/
+runs/
+logs/
+outputs/
+*.log
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
